@@ -81,3 +81,17 @@ $mapped_arr = array_map(function($e){
         return $e != NULL ? $e : false;
     });
     
+    function randomArr($i){
+        global $filtered_arr;
+        $result = array_flip($filtered_arr);
+        return array_rand($result, $i);
+    }
+    // $arr = array_filter(function($e){
+        
+    // }, $arr)  
+    
+    print_r(randomArr(2));
+    print_r(randomArr(3));
+    print_r(randomArr(2));
+    print_r(randomArr(4));
+    print_r(randomArr(5));
