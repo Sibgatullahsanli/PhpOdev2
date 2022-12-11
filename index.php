@@ -77,3 +77,7 @@ $mapped_arr = array_map(function($e){
     else{
         return $e;}
     }, $planets);
+    $filtered_arr = array_filter($mapped_arr, function($e){
+        return $e != NULL ? $e : false;
+    });
+    
