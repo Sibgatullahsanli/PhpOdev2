@@ -46,3 +46,34 @@ Array
     [4] => Neptune
 )
 -->
+<?php
+
+// echo "<pre>";
+// $planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "", "", NULL];
+// print_r($planets);
+
+// //todo BOŞ ELEMANLARI ÇIKARMANIN İLK FORMÜLÜ
+// array_pop($planets);
+// print_r($planets);
+
+// array_pop($planets);
+// array_pop($planets);
+// print_r($planets);
+
+
+// $planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "", "", NULL];
+
+// //todo BOŞ ELEMANLARI DİZİDEN ÇIKARMANIN İKİNCİ VEDE BOŞLARIN DİZİNİN SONUNDA BULUNMASINDAN DOLAYI DAHA BASİT YOLDUR
+// $newPlanets = array_slice($planets,0,7);
+// print_r($newPlanets);
+
+
+echo "<pre>";
+$planets = ["mercury", "venus", "earth","mars","jupiter","saturn","uranus","neptune","","", NULL];
+$mapped_arr = array_map(function($e){ 
+    global $planets;
+    if($e == ""){
+       return NULL;}
+    else{
+        return $e;}
+    }, $planets);
